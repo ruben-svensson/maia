@@ -32,7 +32,6 @@
 <div class="container" id="desk">
     <!--Add the svg part later for visualization-->
     
-    {JSON.stringify(focusedEBContent)}
     <svg 
         class="themed-svg"
         viewBox={svgViewBox} 
