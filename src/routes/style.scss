@@ -1,0 +1,59 @@
+// Global styles
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+// CSS variables for themes
+:root {
+  // Base theme
+  --color-background: #f0f0f0;
+  --color-text-primary: #212121;
+  --color-lines-primary: #333333;
+  --color-text-secondary: #555555;
+  --color-lines-secondary: #bdbdbd;
+  
+  // Component-specific variables
+  --point-size: 1.5px;
+  --path-stroke-width: 2px;
+  --animation-speed: 0.3s;
+}
+
+// Dark theme class
+.theme-dark {
+  --color-background: #1a1a1a;
+  --color-text-primary: #f0f0f0;
+  --color-lines-primary: #e0e0e0;
+  --color-text-secondary: #bdbdbd;
+  --color-lines-secondary: #555555;
+}
+
+// Apply to svg elements
+svg.themed-svg {
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  
+  path {
+    stroke: var(--color-lines-primary);
+    stroke-width: var(--path-stroke-width);
+    transition: stroke 0.2s ease;
+  }
+
+  ellipse, circle, rect {
+    fill: var(--color-background);
+    stroke: var(--color-lines-primary);
+    transition: fill 0.2s ease, stroke 0.2s ease;
+  }
+  
+  // Specific element types
+  .point {
+    fill: var(--color-text-primary);
+    stroke-width: 1;
+  }
+  
+  .coordinate-path {
+    fill: none;
+    stroke: var(--color-lines-primary);
+  }
+}
